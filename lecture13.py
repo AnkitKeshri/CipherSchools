@@ -209,9 +209,91 @@ else:
 #result -> Normal Weight
 
 
+#LOOP
+
+for i in range(5):
+  print(i)
+
+#Iterating Over a List
+fruits = ["apple","banana","cherry","date"]
+
+for fruit in fruits:
+  print(fruit)
 
 
+#Iterating Over a String
+greeting = "Hello"
+for char in greeting:
+  print(char)
 
+
+#Iterating Over a Dictionary
+person = {"name": "John","age": 30,"city": "New York"}
+for key,value in person.items():
+  print(f"{key}: {value}")
+
+#using the 'range()' Function with a Step
+for i in range(0,10,2):
+  print(i)
+  
+#Nested For Loops
+for i in range(3):
+  for j in range(2):
+    print(f"i = {i}, j = {j}")
+
+#Using the 'enumerate()' Function
+fruits = ["apple","banana","cherry"]
+
+for index, fruit in enumerate(fruits):
+  print(f"{index}: {fruit}")
+
+
+#While Loop
+count  = 0
+while count<5:
+  print(count)
+  count+=1
+
+
+#While Loop with Break
+count = 0
+while True:
+  print(count)
+  count += 1
+  if count >= 5:
+    break
+
+
+#While Loop with Continue
+
+count = 0
+while count < 10:
+  count +=1
+   if count % 2 == 0;
+      continue
+print(count)
+
+
+#using a while loop to process user Input
+user_input = ""
+while user_input.lower() != "quit":
+  user_input = input("Enter something (or type 'quit' to exit): ")
+  print(f"You entered: {user_input}")
+
+#Simulating a countdown
+countdown = 10
+while countdown > 0:
+  print(countdown)
+  countdown -= 1
+  print("Blast off!")
+
+#Using a while loop for validation
+password = ""
+while len(password) < 8:
+  password = input("Enter a password (must be at least 8 character long): ")
+  if len(password) < 8:
+    print("Password too short. Try again.")
+print("Password Acccepted")
 
 
 
