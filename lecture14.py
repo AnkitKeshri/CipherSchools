@@ -94,3 +94,66 @@ sorted_students = sorted(students, key=lambda students: student[1])
 
 #Displaying the result
 print(sorted_handling)
+
+
+
+#Error Handling
+#Error HAndling in Python is done using try,except,else and finally blocks. 
+#It allows you to handle exception gracefully and ensure that the program continues to run.
+
+
+#Basic Try-exxcept Block
+try:
+  #code that may raise an exception
+  result = 10/0
+except ZeroDivisionError:
+  #code to handle the exception
+  print("Cannot divide by zero!")
+
+
+#Try-Except-Else Block
+try:
+  #Code that may raise an exception
+  result = 10/2
+except ZeroDivisionError:
+  #code to handle the exception
+  print("Cannot divide by zero!")
+else:
+  #Code to run if no exception occurs
+  print("Division Successful")
+
+
+#Try-Except-Finally Block
+try:
+  #Code that may raise an exception
+  result = 10/2
+except ZeroDivisionError:
+  #Code to handle the exception
+  print("Cannot divide by zero!")
+finally:
+  #Code to run regardless of whether an exception occurs
+  print("Exceution completed.")
+
+
+#Handling Multiple EXceptions
+try:
+  #Code that say raise an exception
+  number = int(input("Enter a number: "))
+  result = 10 / number
+except ValueError:
+  #code to handle the exception
+  print("Invalid input! Please enter a number.")
+except ZeroDivisionError:
+  #Code to handle the exception
+  print("Cannot divide by zero!")
+
+
+#Raising Exception
+def check_positive(number):
+  if number <= 0:
+    raise ValueError("Number must be positive")
+
+try:
+  check_positive(-5)
+except ValueError as e:
+  print(e)
