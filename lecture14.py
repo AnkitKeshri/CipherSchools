@@ -58,3 +58,39 @@ def apply_function(func,x,y):
 
 def multiply(a,b):
   return a * b
+
+#Calling the higher-order function
+print(apply_function(multiply,6,7))
+
+
+#Lambda expression, also known as anonymous function, are small,unnamed function defined using the "lambda" keyword. They are often used for short,throwaway function.
+
+#Simple LAmbda function
+square = lambda x: x * x
+
+#Calling the lambda function
+print(square(5))
+
+
+#LAmbda funciton in 'map'
+numbers = [1,2,3,4,5]
+sqaures = list(map(lambda x: x * x, numbers))
+
+#Displaying the reuslt
+print(squares)
+
+
+#Lambda function in 'filter'
+numbers = [1,2,3,4,5,6]
+even_numbers = list(filter x: x % 2 == 0, numbers))
+
+#Displaying the result
+print(even_numbers)
+
+
+#Lambda Function in 'sorted'
+students = [("Alice",25),("Bob",20),("Charlie",23)]
+sorted_students = sorted(students, key=lambda students: student[1])
+
+#Displaying the result
+print(sorted_handling)
