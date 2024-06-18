@@ -122,3 +122,81 @@ plt.ylabel('Y-axis')
 plt.title('Plot with Annotations')
 plt.annotate('Peak', xy=(5, 11), xytext=(4, 10), arrowprops=dict(facecolor='black', shrink=0.05)) #it will show peak written at 4,10 and a arrow pointing at 5,11
 plt.show()
+
+
+#Creating a Simple Line Plot with Seaborn
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+#Data
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+#Creating a line plot
+sns.lineplot(x=x, y=y)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt. title('Simple Line Plot with Seaborn')
+plt.show()
+
+
+#Creating a Simple Scatter Plot with Seaborn
+# Data
+x1 = [1, 2, 3, 4, 5]
+y1 = [2, 3, 5, 7, 11]
+
+#Creating a Scatter plot
+sns.scatterplot(x=x1, y=y1)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt. title('Simple Scatter Plot with Seaborn')
+plt.show()
+
+
+#Creating a Simple BAr Plot with Seaborn
+# Data
+categories = ['A', 'B', 'C', 'D']
+values = [4, 7, 1, 8]
+
+#Creating a bar plot
+sns.barplot(x=categories, y=values)
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Simple Bar Plot with Seaborn')
+plt.show()
+
+
+#Create a Simple Histogram with Seaborn
+#Data
+data = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+
+#Creating a histogram
+sns.histplot(data, bins=4) 
+plt.xlabel('Value']
+plt.ylabel('Frequency')
+plt.title('Simple Histogram with Seaborn')
+plt.show()
+
+
+#Creating a Pair Plot with Seaborn
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris #Search about iris dataset
+
+iris = load_iris()
+iris_data = sns.load_dataset("iris")
+
+#Creating a pair plot
+sns.pairplot(iris_data, hue='species')
+plt.title('Pair Plot with Seaborn')
+plt.show()
+
+
+#Creating a Heatmap with Seaborn
+import numpy as np
+
+#Data
+data = np.random.rand(10, 12)
+sns.heatmap(data)
+plt. title('Heatmap with Seaborn')
+plt.show()
